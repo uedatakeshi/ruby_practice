@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang='ja'>
+<head>
+<meta charset='utf-8'>
+<title>インターネットのしおり</title>
+</head>
+<body>
+<h1>登録したURL一覧</h1>
+<ul>
+	<% @bookmarks.each do |bookmark| %>
+		<li><%= bookmark.id %>
+	<%= bookmark.url %></li>
+<% end %>
+	</ul>
+</body>
+</html>
