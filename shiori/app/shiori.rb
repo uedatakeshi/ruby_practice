@@ -11,6 +11,8 @@ class Shiori < Sinatra::Base
 			database: db_path
 		)
 	end
+	set :public_folder, File.expand_path(
+		File.join(root, '..', 'public'))
 	get '/' do
 		Bookmark.create!(url: 'http//example.com')
 		@bookmarks = Bookmark.all
